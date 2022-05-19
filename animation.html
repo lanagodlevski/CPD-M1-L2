@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+    .mario {
+      width: 68px;
+      height: 68px;
+      background: url('img/mario-walk-n-jump-68.png') no-repeat;
+      position: absolute;
+      top: 10px;
+      display: block;
+      /* border: 2px solid red; */
+      /* background-position: 60% 0px; */
+      animation: walk .4s steps(4) infinite;
+    }
+      .mario2 {
+        width: 68px;
+        height: 68px;
+        background: url('img/mario-walk-n-jump-68.png') no-repeat;
+        position: relative;
+        display: block;
+        /* border: 2px solid red; */
+        /* background-position: 60% 0px; */
+        animation: jump 4s steps(1) infinite;
+      }
+
+      .wrapper {
+        width: 68px;
+        height: 68px;
+        position: absolute;
+        top: 120px;
+        display: block;
+        animation: move 4s linear infinite;
+      }
+
+      .blast {
+        width: 151px;
+        height: 151px;
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: calc(50% - 75px);
+        background: url('img/blast-151.png');
+        background-position: 0px 0px;
+        animation: blast 2s steps(1) infinite;
+      }
+
+      .emoji {
+        width: 160px;
+        height: 160px;
+        position: absolute;
+        display: block;
+        background: url('img/emoji-120.png');
+      }
+
+      .e-body {
+        background-position: 0 0;
+      }
+
+      .e-smile {
+        background-position: -160px 0;
+        animation: smile .8s steps(1) infinite;
+      }
+
+      .e-eyes {
+        background-position: -640px 0;
+        animation: blink .8s steps(1) infinite;
+      }
+
+      @keyframes blast {
+        0% {background-position: 0px 0px;}
+        3% {background-position: -151px 0px;}
+        6% {background-position: -302px 0px;}
+        9% {background-position: -453px 0px;}
+        12% {background-position: -604px 0px;}
+        15% {background-position: -755px 0px;}
+        18% {background-position: -906px 0px;}
+        21% {background-position: -1057px 0px;}
+        24% {background-position: 0px -151px;}
+        27% {background-position: -151px -151px;}
+        30% {background-position: -302px -151px;}
+        33% {background-position: -453px -151px;}
+        36% {background-position: -604px -151px;}
+        39% {background-position: -755px -151px;}
+        42% {background-position: -906px -151px;}
+        45% {background-position: -1057px -151px;}
+        48% {background-position: 0px -302px;}
+        51% {background-position: -151px -302px;}
+        54% {background-position: -302px -302px;}
+        57% {background-position: -453px -302px;}
+        60% {background-position: -604px -302px;}
+        63% {background-position: -755px -302px;}
+        66% {background-position: -906px -302px;}
+        69% {background-position: -1057px -302px;}
+        72% {background-position: 0px -453px;}
+        75% {background-position: -151px -453px;}
+        78% {background-position: -302px -453px;}
+        81% {background-position: -453px -453px;}
+        84% {background-position: -604px -453px;}
+        87% {background-position: -755px -453px;}
+        90% {background-position: -906px -453px;}
+        93% {background-position: -1057px -453px;}
+
+      }
+      @keyframes walk {
+        0% {background-position: 0px 0px;}
+        100% {background-position: -272px 0px;}
+      }
+
+      @keyframes jump {
+        0% {background-position: -272px 0px; opacity: 0;}
+        48% {background-position: -272px 0px; opacity: 1;}
+        50% {background-position: -340px 0px; opacity: 1;}
+        54% {background-position: -340px 0px; opacity: 0;}
+        100% {background-position: -272px 0px; opacity: 0;}
+      }
+
+      @keyframes jump-opacity {
+        0% {opacity: 1;}
+        48% {opacity: 0;}
+        50% {opacity: 0;}
+        54% {opacity: 1;}
+        100% {opacity: 1;}
+      }
+
+      @keyframes move {
+        0% {left: -68px;}
+        48% {top: 120px;}
+        50% {top: 10px;}
+        54% {top: 120px;}
+        100% {left: 100%;}
+      }
+      @keyframes blink {
+        0% {background-position: -640px 0}
+        33% {background-position: -800px 0}
+        66% {background-position: -960px 0}
+      }
+
+      @keyframes smile {
+        0% {background-position: -160px 0}
+        33% {background-position: -320px 0}
+        66% {background-position: -480px 0}
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- <div class="wrapper">
+      <div class="mario"></div>
+      <div class="mario2"></div> -->
+      <!-- <div class="blast"></div> -->
+      <div class="emoji e-body">
+
+      <div class="emoji e-eyes"></div>
+      <div class="emoji e-smile"></div>
+
+      </div>
+    <!-- </div> -->
+  </body>
+</html>
